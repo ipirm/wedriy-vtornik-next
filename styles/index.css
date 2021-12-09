@@ -2085,12 +2085,24 @@ template, [hidden] {
 .main__content-item svg path {
     fill: #BFD6AD ;
 }
+.main__content-item-orange svg path {
+    fill: #F48120 ;
+}
+.main__content-item-orange span {
+    color: #F48120 !important;
+}
 
 .main__content-item:hover svg path {
     fill: #5F913F ;
 }
 .main__content-item:hover span {
     color: #5F913F;
+}
+.main__content-item-orange:hover svg path {
+    fill: #F48120 ;
+}
+.main__content-item-orange:hover span {
+    color: #F48120;
 }
 
 .main__content-item:hover .main__content-img svg {

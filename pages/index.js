@@ -64,7 +64,7 @@ export default function Home() {
 
                 <div className="main__content-icons">
 
-                  <div className="main__content-item">
+                  <div className="main__content-item main__content-item-orange">
                     <div className="main__content-img">
                       <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -84,7 +84,7 @@ export default function Home() {
                     <span>Питание</span>
                   </div>
 
-                  <div className="main__content-item">
+                  <div className="main__content-item main__content-item-orange">
                     <div className="main__content-img">
                       <svg width="58" height="54" viewBox="0 0 58 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -113,7 +113,7 @@ export default function Home() {
                     <span>Обучение</span>
                   </div>
 
-                  <div className="main__content-item">
+                  <div className="main__content-item main__content-item-orange">
                     <div className="main__content-img">
                       <svg width="57" height="62" viewBox="0 0 57 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -172,7 +172,7 @@ export default function Home() {
                     </div>
                     <span>Медицинское<br/>сопровождение</span>
                   </div>
-                  <div className="main__content-item main__content-item-green">
+                  <div className="main__content-item main__content-item-green main__content-item-orange">
                     <div className="main__content-img">
                       <svg width="56" height="50" viewBox="0 0 56 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

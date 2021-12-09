@@ -150,6 +150,11 @@ export default function Donations() {
     if (name.trim() !== '' && mail.trim() !== '') {
       setShowErrors(false)
       pay()
+      axios.post('https://doroga54321.herokuapp.com/api/v1/submit',{
+        email: mail,
+        name: name,
+        value: amount,
+      })
     } else {
       setShowErrors(true)
       checkValidation()
