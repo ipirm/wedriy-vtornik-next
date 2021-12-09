@@ -118,6 +118,11 @@ export default function Donations() {
           await axios.put('/sum', {
             value: sentAmount
           })
+          await axios.post('https://doroga54321.herokuapp.com/api/v1/submit',{
+            email: mail,
+            name: name,
+            value: amount,
+          })
             .catch(e => {
               console.error(e)
               enqueueSnackbar('Не получилось записать вашу транзакцию, пожалуйста обратитесь к группе поддержки', {
@@ -150,11 +155,6 @@ export default function Donations() {
     if (name.trim() !== '' && mail.trim() !== '') {
       setShowErrors(false)
       pay()
-      axios.post('https://doroga54321.herokuapp.com/api/v1/submit',{
-        email: mail,
-        name: name,
-        value: amount,
-      })
     } else {
       setShowErrors(true)
       checkValidation()
