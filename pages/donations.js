@@ -93,7 +93,7 @@ export default function Donations() {
 
   const { enqueueSnackbar } = useSnackbar()
 
-  const pay = function () {
+  const pay = async function () {
 
     if (amount <=0) {
       return
@@ -114,11 +114,11 @@ export default function Donations() {
         }
       },
       {
-        onSuccess: async function (options) { // success
+        onSuccess: async function (options) {
           await axios.put('/sum', {
             value: sentAmount
           })
-          await axios.post('https://doroga54321.herokuapp.com/api/v1/submit',{
+          await axios.post('https://doroga54321.herokuapp.com/api/v1/public/submit',{
             email: mail,
             name: name,
             value: amount,

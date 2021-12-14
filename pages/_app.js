@@ -5,7 +5,7 @@ import RouteWatcher from "../components/RouteWatcher";
 import {useEffect} from "react";
 import {useRouter} from "next/router";
 
-axios.defaults.baseURL = 'https://doroga54321.herokuapp.com/api/v1/'
+axios.defaults.baseURL = 'https://doroga54321.herokuapp.com/api/v1/public'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
