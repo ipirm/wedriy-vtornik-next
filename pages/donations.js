@@ -101,20 +101,20 @@ export default function Donations() {
 
     const sentAmount = amount
 
-    // let widget = new window.cp.CloudPayments();
-    // widget.pay('charge', // или 'charge'
-    //   { //options
-    //     publicId: 'pk_8f4a3e73345dc747c920553b51c6b', //id из личного кабинета
-    //     description: 'Оплата товаров в example.com', //назначение
-    //     amount: parseFloat(sentAmount), //сумма
-    //     currency: 'RUB', //валюта
-    //     skin: "mini", //дизайн виджета (необязательно)
-    //     data: {
-    //       myProp: 'myProp value'
-    //     }
-    //   },
-    //   {
-    //     onSuccess: async function (options) { // success
+    let widget = new window.cp.CloudPayments();
+    widget.pay('charge', // или 'charge'
+      { //options
+        publicId: 'pk_8f4a3e73345dc747c920553b51c6b', //id из личного кабинета
+        description: 'Оплата товаров в example.com', //назначение
+        amount: parseFloat(sentAmount), //сумма
+        currency: 'RUB', //валюта
+        skin: "mini", //дизайн виджета (необязательно)
+        data: {
+          myProp: 'myProp value'
+        }
+      },
+      {
+        onSuccess: async function (options) {
           await axios.put('/sum', {
             value: sentAmount
           })
@@ -130,18 +130,18 @@ export default function Donations() {
               })
             })
           Router.push('/thank')
-        // }//,
-      //   onFail: function (reason, options) { // fail
-      //     //действие при неуспешной оплате
-      //     enqueueSnackbar('Не получилось сделать оплату, пожалуйста попробуйте еще раз', {
-      //       variant: 'error'
-      //     })
-      //   },
-      //   onComplete: function (paymentResult, options) { //Вызывается как только виджет получает от api.cloudpayments ответ с результатом транзакции.
-      //     //например вызов вашей аналитики Facebook Pixel
-      //   }
-      // }
-    // )
+        },
+        onFail: function (reason, options) { // fail
+          //действие при неуспешной оплате
+          enqueueSnackbar('Не получилось сделать оплату, пожалуйста попробуйте еще раз', {
+            variant: 'error'
+          })
+        },
+        onComplete: function (paymentResult, options) { //Вызывается как только виджет получает от api.cloudpayments ответ с результатом транзакции.
+          //например вызов вашей аналитики Facebook Pixel
+        }
+      }
+    )
   };
 
   const checkValidation = () => {

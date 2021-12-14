@@ -230,9 +230,9 @@ export default function Home() {
                 </div>
 
                 <div className="main__btn-wrap">
-                  <Link href="/donations" passHref={true}>
-                    <div className="btn">Присоединиться</div>
-                  </Link>
+                  {/*<Link href="/donations" passHref={true}>*/}
+                  {/*  <div className="btn">Присоединиться</div>*/}
+                  {/*</Link>*/}
 
                   <a className="details" href="#popup__home">ПОДРОБНЕЕ О ДОМЕ ДЛЯ ЖИЗНИ</a>
                 </div>
