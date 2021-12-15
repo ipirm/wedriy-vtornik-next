@@ -234,6 +234,8 @@ export default function Home() {
                   {/*  <div className="btn">Присоединиться</div>*/}
                   {/*</Link>*/}
 
+
+
                   <a className="details" href="#popup__home">ПОДРОБНЕЕ О ДОМЕ ДЛЯ ЖИЗНИ</a>
                 </div>
 
