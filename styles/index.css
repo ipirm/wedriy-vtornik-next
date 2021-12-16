@@ -3812,6 +3812,7 @@ template, [hidden] {
         -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
         order: 5;
+        margin-top: 150px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -3838,7 +3839,7 @@ template, [hidden] {
     .main__content .progress-value {
     }
     .main__content .details {
-        padding-bottom: 320px;
+        padding-bottom: 275px;
     }
     .main {
         background-position: center;
