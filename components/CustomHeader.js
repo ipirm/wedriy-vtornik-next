@@ -8,9 +8,9 @@ const CustomHeader = () => {
         </nav>
         <div className="mob-nav">
           <div className="header__logo-wrap">
-            <a target="_blank" href="https://givingtuesday.ru/" rel="noreferrer">
-              <img src="/img/heart.svg" alt=""/>
-            </a>
+            {/*<a target="_blank" href="https://givingtuesday.ru/" rel="noreferrer">*/}
+            {/*  <img src="/img/heart.svg" alt=""/>*/}
+            {/*</a>*/}
 
             <a href="https://doroga-zhizni.org/" target="_blank" rel="noreferrer">
               <img src="/img/logo.svg" alt=""/>
@@ -23,12 +23,12 @@ const CustomHeader = () => {
             </div>
           </div>
 
-          <div className="header__left">
-            <a href="#popup">
-              Что такое
-              <span>#ЩедрыйВторник?</span>
-            </a>
-          </div>
+          {/*<div className="header__left">*/}
+          {/*  <a href="#popup">*/}
+          {/*    Что такое*/}
+          {/*    <span>#ЩедрыйВторник?</span>*/}
+          {/*  </a>*/}
+          {/*</div>*/}
 
           <div className="header__right">
             <a href="tel:+74993817975" className="header__phone">+7 499 381 79 75</a>
@@ -37,17 +37,17 @@ const CustomHeader = () => {
           </div>
         </div>
 
-        <div className="header__left">
-          <a href="#popup">
-            Что такое
-            <span>#ЩедрыйВторник?</span>
-          </a>
-        </div>
+        {/*<div className="header__left">*/}
+        {/*  <a href="#popup">*/}
+        {/*    Что такое*/}
+        {/*    <span>#ЩедрыйВторник?</span>*/}
+        {/*  </a>*/}
+        {/*</div>*/}
 
         <div className="header__logo-wrap">
-          <a target="_blank" href="https://givingtuesday.ru/" rel="noreferrer">
-            <img src="/img/heart.svg" alt=""/>
-          </a>
+          {/*<a target="_blank" href="https://givingtuesday.ru/" rel="noreferrer">*/}
+          {/*  <img src="/img/heart.svg" alt=""/>*/}
+          {/*</a>*/}
 
           <a href="https://doroga-zhizni.org/" target="_blank" rel="noreferrer">
             <img src="/img/logo.svg" alt=""/>

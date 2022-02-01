@@ -1590,6 +1590,7 @@ img.mfp-img {
 .popup__home-title {
     max-width: 472px;
     padding-top: 60px;
+    margin-bottom: 50px;
 }
 
 .popup__home-title h2 {
@@ -1604,6 +1605,32 @@ img.mfp-img {
     margin-bottom: 15px;
 }
 
+.popup__home-title ul {
+    font-family: "NotoSans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.popup__home-title li {
+    display: flex;
+    align-items: baseline;
+}
+
+.popup__home-title .li-span {
+    margin-right: 10px;
+    font-family: "NotoSans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 130%;
+    color: #000000;
+}
+
 .popup__home-title p:first-child {
     color: #5F913F;
 }
@@ -1611,11 +1638,16 @@ img.mfp-img {
 .popup__home-title span {
     color: #FB9358;
     font-family: "Lifehack";
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     display: block;
     font-size: 32px;
     line-height: 32px;
 }
+
+.popup__home-title .green {
+    color: #5F913F;
+}
+
 
 .popup__home-img {
     display: -webkit-box;
@@ -1961,12 +1993,12 @@ template, [hidden] {
 
 @media (min-width: 1270px) {
     .container {
-        max-width: 1100px;
+        max-width: 1440px;
     }
 }
 
 .header {
-    padding: 15px 0 70px;
+    padding: 15px 0 35px;
     background-image: url(/img/sky.svg);
     background-position: top right;
     background-repeat: no-repeat;
@@ -1997,7 +2029,7 @@ template, [hidden] {
 
 .header__logo-wrap {
     width: 100%;
-    max-width: 445px;
+    max-width: 335px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2051,7 +2083,7 @@ template, [hidden] {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    max-width: 510px;
+    max-width: 525px;
 }
 
 .main__content-icons {
@@ -2152,9 +2184,18 @@ template, [hidden] {
     font-size: 18px;
     color: #FB9358;
     font-weight: 500;
-    max-width: 465px;
+    max-width: 550px;
     margin: 0 auto;
-    margin-bottom: 35px;
+    text-align: center;
+}
+
+.main__content p span {
+    font-size: 18px;
+    display: block;
+    color: #FB9358;
+    font-weight: 500;
+    max-width: 465px;
+    font-family: "NotoSans", sans-serif;
     text-align: center;
 }
 
@@ -2173,6 +2214,11 @@ template, [hidden] {
 
 .main__btn-wrap .btn {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 236px;
+    height: 64px;
 }
 
 
@@ -2181,6 +2227,17 @@ template, [hidden] {
     color: #5F913F;
     font-size: 50px;
     margin-bottom: 20px;
+}
+.money-subtitle {
+    font-family: "Lifehack";
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 25px;
+    line-height: 100%;
+    text-align: center;
+    color: #5F913F;
 }
 
 .input__file {
@@ -2214,6 +2271,11 @@ template, [hidden] {
     text-decoration: underline;
 }
 
+.main__btn-wrap-top {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
 .copyright {
     font-size: 15px;
     font-weight: 300;
@@ -2225,7 +2287,7 @@ template, [hidden] {
 }
 
 .footer {
-    padding-bottom: 25px;
+    padding-bottom: 5px;
     position: relative;
     z-index: 2;
 }
@@ -3105,6 +3167,7 @@ template, [hidden] {
 
 .logo-house {
     width: 64px;
+    cursor: pointer;
     height: 72px;
 }
 
@@ -3761,6 +3824,9 @@ template, [hidden] {
 }
 
 @media (max-width: 1050px) {
+    .body {
+        height: 100%;
+    }
     .s-thanks::after {
         left: 0;
     }
@@ -3804,15 +3870,20 @@ template, [hidden] {
         order: 2;
     }
     .main__content .money {
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-        order: 3;
-    }
-    .main__content .progress {
         -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
         order: 5;
-        margin-top: 150px;
+    }
+    .main__content .money-subtitle {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    .main__content .progress {
+        -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+        order: 6;
+        margin-top: 115px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -3824,14 +3895,14 @@ template, [hidden] {
         justify-content: center;
     }
     .main__content .main__content-icons {
-        -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-        order: 6;
+        -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+        order: 8;
     }
     .main__content .main__btn-wrap {
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-        order: 4;
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 5;
     }
     .main__content .progress-bg {
         width: 100%;
@@ -3841,9 +3912,25 @@ template, [hidden] {
     .main__content .details {
         padding-bottom: 275px;
     }
+    .main__content .main__btn-wrap-top {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 4;
+        order: 4;
+    }
     .main {
         background-position: center;
         background-size: 36%;
+    }
+    .money {
+        font-size: 50px;
+    }
+    /*.main__btn-wrap .btn {*/
+    /*    font-size: 15px;*/
+    /*    width: 200px;*/
+    /*    height: 40px;*/
+    /*}*/
+    .main__btn-wrap {
+        padding-bottom: 180px;
     }
     .popup__home {
         max-width: 100%;
@@ -3870,6 +3957,15 @@ template, [hidden] {
         width: 100%;
         /*height: 145px;*/
     }
+
+    .main__content .money-subtitle {
+        font-size: 26px;
+        margin-bottom: 5px;
+    }
+    .main__btn-wrap-top {
+        padding-bottom: 0;
+    }
+
     .popup__home-img a {
         margin:0 auto 15px;
     }
@@ -3971,6 +4067,9 @@ template, [hidden] {
 @media (max-width: 767.98px) {
     .popup__wrap {
         padding: 85px 10px 50px;
+    }
+    .main__content .details {
+        padding-bottom: 0;
     }
     .popup__wrap h2 {
         font-size: 40px;
