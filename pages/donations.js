@@ -178,38 +178,38 @@ export default function Donations() {
                   детей-сирот, приезжающих в Москву на лечениe.
                 </p>
 
-                <div className="donations__icons">
+                {/*<div className="donations__icons">*/}
 
-                  <div className="donations__icons-item">
-                    <div className="donations__icons-img">
-                      <img src="/img/donations__icon-1.svg" alt="" />
-                    </div>
-                    <span>
-                    Сделайте пожертвование
-                  </span>
-                  </div>
+                {/*  <div className="donations__icons-item">*/}
+                {/*    <div className="donations__icons-img">*/}
+                {/*      <img src="/img/donations__icon-1.svg" alt="" />*/}
+                {/*    </div>*/}
+                {/*    <span>*/}
+                {/*    Сделайте пожертвование*/}
+                {/*  </span>*/}
+                {/*  </div>*/}
 
-                  <div className="donations__icons-item">
-                    <div className="donations__icons-img"><img src="/img/donations__icon-2.svg" alt="" />
-                    </div>
-                    <span>
-                    Загрузите свою фотографию
-                  </span>
-                  </div>
+                {/*  <div className="donations__icons-item">*/}
+                {/*    <div className="donations__icons-img"><img src="/img/donations__icon-2.svg" alt="" />*/}
+                {/*    </div>*/}
+                {/*    <span>*/}
+                {/*    Загрузите свою фотографию*/}
+                {/*  </span>*/}
+                {/*  </div>*/}
 
-                  <div className="donations__icons-item">
-                    <div className="donations__icons-img"><img src="/img/donations__icon-3.svg" alt="" />
-                    </div>
-                    <span>
-                    Поделитесь в соц. сетях
-                  </span>
-                  </div>
+                {/*  <div className="donations__icons-item">*/}
+                {/*    <div className="donations__icons-img"><img src="/img/donations__icon-3.svg" alt="" />*/}
+                {/*    </div>*/}
+                {/*    <span>*/}
+                {/*    Поделитесь в соц. сетях*/}
+                {/*  </span>*/}
+                {/*  </div>*/}
 
-                </div>
+                {/*</div>*/}
 
-                <div className="helped">
-                  Уже помогли
-                </div>
+                {/*<div className="helped">*/}
+                {/*  Уже помогли*/}
+                {/*</div>*/}
 
               </div>
               <div className="donations__form">
@@ -315,23 +315,23 @@ export default function Donations() {
             </div>
           </div>
         </section>
-        { imagesFetched && <section className="gallery">
-          <div className="container">
+        {/*{ imagesFetched && <section className="gallery">*/}
+        {/*  <div className="container">*/}
 
-            <h2>Помогли Дому для жизни и поддержали акцию «Щедрый вторник»</h2>
+        {/*    <h2>Помогли Дому для жизни и поддержали акцию «Щедрый вторник»</h2>*/}
 
-            <div className={`gallery__wrap ${!showImages ? 'gallery__wrap--hidden' : ''}`.trim()}>
-              {shownImages.map((img, index) => (
-                <a key={img.id + '-' + index}>
-                  <div className="gallery__image">
-                    <LazyLoadImage src={img.url} alt=""/>
-                  </div>
-                </a>
-              ))}
-            </div>
+        {/*    <div className={`gallery__wrap ${!showImages ? 'gallery__wrap--hidden' : ''}`.trim()}>*/}
+        {/*      {shownImages.map((img, index) => (*/}
+        {/*        <a key={img.id + '-' + index}>*/}
+        {/*          <div className="gallery__image">*/}
+        {/*            <LazyLoadImage src={img.url} alt=""/>*/}
+        {/*          </div>*/}
+        {/*        </a>*/}
+        {/*      ))}*/}
+        {/*    </div>*/}
 
-          </div>
-        </section>}
+        {/*  </div>*/}
+        {/*</section>}*/}
         <footer className="footer">
           <div className="footer__wrap">
 

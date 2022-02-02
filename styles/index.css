@@ -3549,7 +3549,7 @@ template, [hidden] {
     position: absolute;
     content: '';
     width: 100%;
-    height: 830px;
+    height: 630px;
     top: 30%;
     background-image: url(/img/donation__bg.jpg);
     background-repeat: no-repeat;
