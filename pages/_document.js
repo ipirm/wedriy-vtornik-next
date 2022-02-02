@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Щедрый вторник</title>
+          <title>Дом для жизни</title>
           <meta charSet="utf-8"/>
           <meta name="description" content="Вместе создаём дом для детей-сирот"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -19,13 +19,13 @@ export default class MyDocument extends Document {
             name="description"
             content="Вместе создаём дом для детей-сирот"
           />
-          <meta property="og:title" content="Щедрый Вторник"/>
+          <meta property="og:title" content="Дом для жизни"/>
           <meta property="og:description" content="Вместе создаём дом для детей-сирот"/>
           <meta property="og:url" content="https://tuesday.doroga-zhizni.org/"/>
           <meta property="og:type" content="website"/>
           <meta property="twitter:card" content="summary_large_image"/>
           <meta property="twitter:url" content="https://tuesday.doroga-zhizni.org/"/>
-          <meta property="twitter:title" content="Щедрый вторник"/>
+          <meta property="twitter:title" content="Дом для жизни"/>
           <meta property="twitter:description" content="Вместе создаём дом для детей-сирот"/>
           <link rel="apple-touch-icon" href="/favicon.ico"/>
           <link rel="icon" href="/favicon.ico"/>
