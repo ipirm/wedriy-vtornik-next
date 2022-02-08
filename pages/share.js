@@ -136,7 +136,7 @@ export default function Share ({imageUrl}) {
 
             <a href="/oferta.pdf" target="_blank" className="copyright">
               Публичная оферта о добровольном пожертвовании
-              <span>© «Дорога Жизни» 2021 г.</span>
+              <span>© «Дорога Жизни» 2022 г.</span>
             </a>
 
           </div>
