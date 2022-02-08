@@ -2066,12 +2066,14 @@ template, [hidden] {
     -ms-flex-pack: end;
     justify-content: flex-end;
     padding-top: 50px;
+    padding-bottom: 130px;
 }
 
 .main__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 110px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2226,7 +2228,7 @@ template, [hidden] {
     font-family: "Lifehack";
     color: #5F913F;
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .money-subtitle {
     font-family: "Lifehack";
@@ -2266,6 +2268,7 @@ template, [hidden] {
 
 .details {
     font-weight: 600;
+    margin-top: 15px;
     color: #5F913F;
     font-size: 14px;
     text-decoration: underline;
@@ -3859,6 +3862,9 @@ template, [hidden] {
     .main__content {
         max-width: initial;
     }
+    .donations.s-thanks:after {
+        display: none;
+    }
     .main__content h1 {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -3880,9 +3886,9 @@ template, [hidden] {
         order: 4;
     }
     .main__content .progress {
-        -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-        order: 6;
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 5;
         margin-top: 115px;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3918,7 +3924,7 @@ template, [hidden] {
         order: 4;
     }
     .main {
-        background-position: center;
+        background-position: bottom;
         background-size: 36%;
     }
     .money {
@@ -3930,7 +3936,7 @@ template, [hidden] {
     /*    height: 40px;*/
     /*}*/
     .main__btn-wrap {
-        padding-bottom: 180px;
+        padding-bottom: 0px;
     }
     .popup__home {
         max-width: 100%;
@@ -4071,6 +4077,16 @@ template, [hidden] {
     .main__content .details {
         padding-bottom: 0;
     }
+    .main__wrap {
+        padding-bottom: 320px;
+    }
+    .main__content {
+        margin-top: 47px;
+    }
+    .main__btn-wrap-top {
+        margin-bottom: 57px;
+        margin-top: 21px;
+    }
     .popup__wrap h2 {
         font-size: 40px;
         line-height: 40px;
@@ -4138,6 +4154,9 @@ template, [hidden] {
         align-items: center;
         max-width: 217px;
         margin-bottom: 25px;
+    }
+    .main__content .progress {
+        margin: 0 0 25px;
     }
     .donations__icons-img {
         min-width: 75px;

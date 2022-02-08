@@ -167,16 +167,16 @@ export default function Donations() {
 
       <div className="s-gallery">
         <CustomHeader />
-        <section className="donations">
+        <section className="donations s-thanks">
           <div className="container">
 
             <div className="donations__wrap">
 
               <div className="donations__title">
-                <p>
-                  Делая пожертвование на работу этой программы, вы помогаете обустроить дом для
-                  детей-сирот, приезжающих в Москву на лечениe.
-                </p>
+                {/*<p>*/}
+                {/*  Делая пожертвование на работу этой программы, вы помогаете обустроить дом для*/}
+                {/*  детей-сирот, приезжающих в Москву на лечениe.*/}
+                {/*</p>*/}
 
                 {/*<div className="donations__icons">*/}
 
@@ -337,7 +337,7 @@ export default function Donations() {
 
             <a href="/oferta.pdf" target="_blank" className="copyright">
               Публичная оферта о добровольном пожертвовании
-              <span>© «Дорога Жизни» 2021 г.</span>
+              <span>© «Дорога Жизни» 2022 г.</span>
             </a>
 
           </div>
