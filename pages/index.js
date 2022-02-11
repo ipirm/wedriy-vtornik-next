@@ -3,10 +3,16 @@ import axios from "axios";
 import WithScripts from "../components/WithScripts";
 import Link from 'next/link'
 import CustomHeader from "../components/CustomHeader";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper";
+
 
 export default function Home() {
   const [acquiredSum, setAcquiredSum] = useState(0)
-  const [maxSum] = useState(3570000)
+  const [maxSum] = useState(5255079)
 
   useEffect(() => {
     (async () => {
@@ -58,7 +64,7 @@ export default function Home() {
                       Для работы социального центра в период июнь - декабрь
                     </div>
                     <div className="money">
-                      Нам нужно собрать 3 570 000 рублей
+                      Нам нужно собрать 5 255 079 рублей
                     </div>
 
                     <div className="progress">
@@ -340,7 +346,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <span className={"green"}>А это 510 000 рублей в месяц</span>
+              <span className={"green"}>А это 750 726 рублей в месяц</span>
 
               <span>Эти траты — плата</span>
               <ul>
@@ -361,16 +367,35 @@ export default function Home() {
           </div>
 
           <div className="popup__home-img">
-            {(() => {
-              const imgs = []
-
-              for (let i = 0; i < 44; i++) {
-                imgs.push(<a data-width="260" data-height="280" key={i}>
-                  <img className="gallery-image" src={`/img/donate/img (${i + 1}).jpg`} alt=""/>
-                </a>)
-              }
-              return imgs
-            })()}
+            <Swiper
+                navigation={true}
+                pagination={{
+                  dynamicBullets: true,
+                  clickable: true,
+                }}
+                slidesPerView={1}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 3
+                  }
+                }}
+                spaceBetween={0}
+                modules={[Navigation,Pagination]}
+                className="mySwiper">
+                {(() => {
+                  const imgs = []
+                  for (let i = 0; i < 44; i++) {
+                    imgs.push(
+                        <SwiperSlide>
+                          <a key={i}>
+                            <img className="gallery-image" src={`/img/donate/img (${i + 1}).jpg`} alt=""/>
+                          </a>
+                        </SwiperSlide>
+                    )
+                  }
+                  return imgs
+                })()}
+            </Swiper>
           </div>
         </div>
       </div>
