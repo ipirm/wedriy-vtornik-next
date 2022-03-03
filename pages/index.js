@@ -32,7 +32,8 @@ export default function Home() {
   const visibleSum = useMemo(() => {
     const parts = acquiredSum.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    return parts.join(".");
+    parts.join(".");
+    return parseInt(parts + otherDonationSum)
   }, [acquiredSum])
 
   const percentage = useMemo(() => {
@@ -71,9 +72,15 @@ export default function Home() {
 
                     <div className="progress">
                       <progress max="100" value="30"/>
-                      <div className="progress-value">Уже собрали {parseInt(visibleSum) + otherDonationSum} рублей на</div>
+                      <div className="progress-value">Уже собрали {visibleSum} рублей на</div>
                       <div className="progress-bg">
                         <div className="progress-bar" style={{width: `${percentage}%`}}/>
+                        {
+                          console.log(percentage)
+                        }
+                        {
+                          console.log(visibleSum)
+                        }
                       </div>
                     </div>
 
