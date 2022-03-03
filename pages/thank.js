@@ -71,13 +71,18 @@ export default function Thank() {
               <div className="thanks__content">
                 <h1 className="section__title">Спасибо за помощь :)</h1>
                 <p>
-                  Загрузите своё фото в общую галерею. Вместе мы сделаем мир лучше
+                  Вместе мы сделаем мир лучше
                 </p>
                 <div className="main__btn-wrap">
-                  <label htmlFor="input__file" className={`btn ${imageLoading ? 'disabled' : ''}`.trim()} onClick={onChooseFile} style={{marginTop: '30px'}}>
-                    <span className="input__file-button-text">Загрузить</span>
-                  </label>
-                  { !imageLoading ? <Link href="/"><div href="/" className="miss">Пропустить</div></Link> : null }
+                  {/*<label htmlFor="input__file" className={`btn ${imageLoading ? 'disabled' : ''}`.trim()} onClick={onChooseFile} style={{marginTop: '30px'}}>*/}
+                  {/*  <span className="input__file-button-text">Загрузить</span>*/}
+                  {/*</label>*/}
+                  {/*{ !imageLoading ? <Link href="/"><div href="/" className="miss">Пропустить</div></Link> : null }*/}
+                  <Link href={"/"}>
+                    <div className={"btn"}>
+                        <span>На главную</span>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

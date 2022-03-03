@@ -12,7 +12,8 @@ import { Navigation, Pagination } from "swiper";
 
 export default function Home() {
   const [acquiredSum, setAcquiredSum] = useState(0)
-  const [maxSum] = useState(5255079)
+  const [maxSum] = useState(9008712)
+  const [otherDonationSum] = useState(593460)
 
   useEffect(() => {
     (async () => {
@@ -35,8 +36,9 @@ export default function Home() {
   }, [acquiredSum])
 
   const percentage = useMemo(() => {
-    return Math.min(100, acquiredSum / maxSum * 100)
+    return Math.min(100, acquiredSum + otherDonationSum / maxSum * 100)
   }, [acquiredSum])
+
 
   return (
       <WithScripts>
@@ -64,12 +66,12 @@ export default function Home() {
                       Для работы социального центра в период июнь - декабрь
                     </div>
                     <div className="money">
-                      Нам нужно собрать 5 255 079 рублей
+                      Нам нужно собрать 9 008 712 рублей
                     </div>
 
                     <div className="progress">
                       <progress max="100" value="30"/>
-                      <div className="progress-value">Уже собрали {visibleSum} рублей на</div>
+                      <div className="progress-value">Уже собрали {parseInt(visibleSum) + otherDonationSum} рублей на</div>
                       <div className="progress-bg">
                         <div className="progress-bar" style={{width: `${percentage}%`}}/>
                       </div>
