@@ -347,7 +347,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <span className={"green"}>А это 750 726 рублей в месяц</span>
+              <span className={"green"}>А это 1 286 960 рублей в месяц</span>
 
               <span>Эти траты — плата</span>
               <ul>
