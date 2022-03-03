@@ -70,7 +70,7 @@ export default function Home() {
 
                     <div className="progress">
                       <progress max="100" value="30"/>
-                      <div className="progress-value">Уже собрали {visibleSum} рублей на</div>
+                      <div className="progress-value">Уже собрали {visibleSum} рублей</div>
                       <div className="progress-bg">
                         <div className="progress-bar" style={{width: `${percentage}%`}}/>
                       </div>
