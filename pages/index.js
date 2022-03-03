@@ -13,7 +13,6 @@ import { Navigation, Pagination } from "swiper";
 export default function Home() {
   const [acquiredSum, setAcquiredSum] = useState(0)
   const [maxSum] = useState(9008712)
-  const [otherDonationSum] = useState(593460)
 
   useEffect(() => {
     (async () => {
@@ -32,12 +31,11 @@ export default function Home() {
   const visibleSum = useMemo(() => {
     const parts = acquiredSum.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    parts.join(".");
-    return parseInt(parts + otherDonationSum)
+    return parts.join(".");
   }, [acquiredSum])
 
   const percentage = useMemo(() => {
-    return Math.min(100, acquiredSum + otherDonationSum / maxSum * 100)
+    return Math.min(100, acquiredSum / maxSum * 100)
   }, [acquiredSum])
 
 
@@ -72,15 +70,9 @@ export default function Home() {
 
                     <div className="progress">
                       <progress max="100" value="30"/>
-                      <div className="progress-value">Уже собрали {visibleSum} рублей на</div>
+                      <div className="progress-value">Уже собрали {visibleSum} рублей</div>
                       <div className="progress-bg">
                         <div className="progress-bar" style={{width: `${percentage}%`}}/>
-                        {
-                          console.log(percentage)
-                        }
-                        {
-                          console.log(visibleSum)
-                        }
                       </div>
                     </div>
 
