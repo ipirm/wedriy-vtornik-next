@@ -62,7 +62,7 @@ export default function Home() {
                       <a className="details" href="#popup__home">ПОДРОБНЕЕ О ДОМЕ ДЛЯ ЖИЗНИ</a>
                     </div>
                     <div className="money-subtitle">
-                      Для работы социального центра в период июнь - декабрь
+                      Для работы социального центра в период январь - декабрь
                     </div>
                     <div className="money">
                       Нам нужно собрать 9 008 712 рублей
@@ -347,7 +347,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <span className={"green"}>А это 1 286 960 рублей в месяц</span>
+              <span className={"green"}>А это 750 726 рублей в месяц</span>
 
               <span>Эти траты — плата</span>
               <ul>
