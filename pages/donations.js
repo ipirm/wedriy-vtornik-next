@@ -100,7 +100,6 @@ export default function Donations() {
     }
 
     const sentAmount = amount
-
     let widget = new window.cp.CloudPayments();
     widget.pay('charge', // или 'charge'
       { //options
@@ -150,9 +149,12 @@ export default function Donations() {
     setOtherSumError(!selectedAmount && otherSumValue.trim() === '')
   }
 
+  const inputYes = document.getElementById("yes")
+  const inputApproval = document.getElementById('approval')
+
   const onSubmitPayment = (e) => {
     e.preventDefault()
-    if (name.trim() !== '' && mail.trim() !== '') {
+    if (name.trim() !== '' && mail.trim() !== '' && inputApproval.checked && inputYes.checked) {
       setShowErrors(false)
       pay()
     } else {
