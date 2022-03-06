@@ -14,6 +14,9 @@ export default function Donations() {
   const [maxImagesToShow] = useState(9)
   const [randomizeImagesTimeout] = useState(20)
 
+  const inputYesRef = useRef(null)
+  const inputApprovalRef = useRef(null)
+
   const selectRandomImages = (images, amount) => {
     if (images?.length)
       return images.slice().sort(() => 0.5 - Math.random()).slice(0, amount)
@@ -149,12 +152,9 @@ export default function Donations() {
     setOtherSumError(!selectedAmount && otherSumValue.trim() === '')
   }
 
-  const inputYes = document.getElementById("yes")
-  const inputApproval = document.getElementById('approval')
-
   const onSubmitPayment = (e) => {
     e.preventDefault()
-    if (name.trim() !== '' && mail.trim() !== '' && inputApproval.checked && inputYes.checked) {
+    if (name.trim() !== '' && mail.trim() !== '' && inputYesRef.current.checked && inputApprovalRef.current.checked) {
       setShowErrors(false)
       pay()
     } else {
@@ -290,14 +290,26 @@ export default function Donations() {
                     </label>
                   </div>
                   <div className='checkbox__wrap'>
-                    <input type="checkbox" className="custom-checkbox" id="yes"
-                           name="yes" value="yes" />
+                    <input
+                        type="checkbox"
+                        className="custom-checkbox"
+                        id="yes"
+                        name="yes"
+                        value="yes"
+                        ref={inputYesRef}
+                    />
                     <label
                       htmlFor="yes"><span>Я ознакомился с условия публичной оферты</span></label>
                   </div>
                   <div className='checkbox__wrap'>
-                    <input type="checkbox" className="custom-checkbox" id="approval"
-                           name="approval" value="approval" />
+                    <input
+                        type="checkbox"
+                        className="custom-checkbox"
+                        id="approval"
+                        name="approval"
+                        value="approval"
+                        ref={inputApprovalRef}
+                    />
                     <label htmlFor="approval"><span>Даю согласие на обработку моих персональных данных</span></label>
                   </div>
                   <div className="button__wrap">
